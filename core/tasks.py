@@ -87,7 +87,7 @@ def scroll_and_select_user(page, username, targets):
     logger.debug(f"账号 {username} 进入好友列表页面")
 
     # 确保第一个好友元素加载完成
-    first_friend_selector = 'xpath=//*[@id="sub-app"]/div/div/div[2]/div[2]/div/div/div[1]/div/div/div/ul/div/div/div[1]/li/div'
+    first_friend_selector = "xpath=//*[contains(@class, 'semi-list-item-body')]"
     page.wait_for_selector(first_friend_selector)
     page.locator(first_friend_selector).click()  # 点击第一个好友，确保列表激活
 
