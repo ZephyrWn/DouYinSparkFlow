@@ -16,7 +16,7 @@ jobs:
         python-version: '3.11'
     - name: Test Douyin Accessibility
       run: |
-        curl -I https://creator.douyin.com/
+        curl -I https://www.douyin.com/chat?isPopup=1
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
